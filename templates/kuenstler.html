@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Künstler</title>
+  <style>
+    .artist {
+      display: inline-block;
+      text-align: center;
+      margin: 10px;
+    }
+    .artist img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .artist .artist-info {
+      display: none;
+    }
+    .artist:hover .artist-info {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('startseite') }}">Startseite</a></li>
+        <li><a href="{{ url_for('kuenstler') }}">Künstler</a></li>
+        <li><a href="{{ url_for('events') }}">Events</a></li>
+        <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+        <li><a href="{{ url_for('impressum') }}">Impressum</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Unsere Künstler</h1>
+
+  <div class="artist">
+    <img src="kuenstler1.jpg" alt="Künstler 1">
+    <div class="artist-info">
+      <h3>Künstler 1</h3>
+      <p>Text über Künstler 1</p>
+    </div>
+  </div>
+
+  <div class="artist">
+    <img src="draw.jpg" alt="Künstler 2">
+    <div class="artist-info">
+      <h3>Künstler 2</h3>
+      <p>Text über Künstler 2</p>
+    </div>
+  </div>
+
+  <div class="artist">
+    <img src="kuenstler3.jpg" alt="Künstler 3">
+    <div class="artist-info">
+      <h3>Künstler 3</h3>
+      <p>Text über Künstler 3</p>
+    </div>
+  </div>
+
+</body>
+</html>

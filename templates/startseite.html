@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+  <title>Startseite</title>
+  <style>
+    /* Hauptstyles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Hero-Bild */
+section.hero-image {
+  text-align: center;
+}
+
+/* Aktuelle Veranstaltungen */
+section.events ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Social-Media-Links */
+section.social-media ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section.social-media ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+section.social-media ul li a {
+  color: #333;
+}
+
+/* Newsletter-Formular */
+section.newsletter-form {
+  text-align: center;
+}
+
+section.newsletter-form input[type="email"] {
+  width: 300px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+section.newsletter-form button {
+  padding: 5px 10px;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  section.newsletter-form input[type="email"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+    </style>
+</head>
+<body>
+  <header>
+
+    <nav>
+      <ul>
+        <li><a >Startseite</a></li>
+        <li><a href="{{ url_for('kuenstler') }}">Künstler</a></li>
+        <li><a href="{{ url_for('events') }}">Events</a></li>
+        <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+        <li><a href="{{ url_for('impressum') }}">Impressum</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <img src="draw" alt="Hero Image">
+  </section>
+
+  <section>
+    <h2>WillkommenStartseite</h2>
+    <p>Hier finden Sie Informationen zu unseren Veranstaltungen, Künstlern, unserem Chatbot und dem Impressum.</p>
+  </section>
+
+  <section>
+    <h2>Aktuelle Veranstaltungen</h2>
+    <ul>
+      <li>Event 1 - Datum und Uhrzeit</li>
+      <li>Event 2 - Datum und Uhrzeit</li>
+      <li>Event 3 - Datum und Uhrzeit</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Folgen Sie uns auf Social Media</h2>
+    <ul>
+      <li><a href="https://www.facebook.com">Facebook</a></li>
+      <li><a href="https://www.instagram.com">Instagram</a></li>
+      <li><a href="https://www.twitter.com">Twitter</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Newsletter abonnieren</h2>
+    <p>Melden Sie sich für unseren Newsletter an, um über zukünftige Veranstaltungen und Neuigkeiten informiert zu werden:</p>
+    <form action="newsletter.php" method="POST">
+      <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+      <button type="submit">Anmelden</button>
+    </form>
+  </section>
+
+</body>
+</html>
